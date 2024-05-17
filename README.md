@@ -37,9 +37,10 @@ Keys can be listed by:
 gpg -k
 ```
 2) Tag the version of your latest informations by using [git tag + signing](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work) commands either from terminal or developer IDE. Please Note that an update in github web desktop itself is not working, because the platform will use an intermediate key.
-3) The Bot user clones the latest tag of your private repo and verifies the signature of the tag against the onboarded GPG keys
-4) After verification the content will be taken over for your country
-5) The bot creates a PR
+3) If the signing fails with error 'signing failed: secret key not available', use the following command to setup gpg in git config: git config --global gpg.program "C:\Program Files (x86)\GnuPG\bin\gpg.exe"
+4) The Bot user clones the latest tag of your private repo and verifies the signature of the tag against the onboarded GPG keys
+5) After verification the content will be taken over for your country
+6) The bot creates a PR
 
 
 # Trust Domains
